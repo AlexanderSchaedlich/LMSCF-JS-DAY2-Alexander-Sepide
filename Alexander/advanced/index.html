@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Time Convert</h1>
+	<p style="color: red;">Deadline!!!</p>
+	<input type="date" name="number" id="date">
+	<br><br>
+	<button type="submit" onclick="getValueForCalcTime()">Submit</button>
+	<br>
+	<p style="color: green;">Time left</p>
+	<p id="result"></p>
+
+	<script>
+		function getValueForCalcTime() {
+			var date = document.getElementById("date").value;
+			var current = new Date();
+			console.log(current)
+			calcTime(date);
+		}
+		function calcTime(s) {
+
+		}
+		// $('#submit').on('click', function(){
+		// var date = new Date($('#date-input').val());
+		// day = date.getDate();
+		// month = date.getMonth() + 1;
+		// year = date.getFullYear();
+		// alert([day, month, year].join('/'));
+		// });
+	</script>
+</body>
+</html>

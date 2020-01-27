@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Average Grade</h1>
+	<p>Math</p>
+	<input type="number" name="number" id="math">
+	<p>Physics</p>
+	<input type="number" name="number" id="physics">
+	<p>English</p>
+	<input type="number" name="number" id="english">
+	<br><br>
+	<button type="submit" onclick="getValuesForCalcAverage()">Submit</button>
+	<br>
+	<p id="result"></p>
+	<script>
+		function getValuesForCalcAverage() {
+			var math = document.getElementById("math").value;
+			var physics = document.getElementById("physics").value;
+			var english = document.getElementById("english").value;
+			CalcAverage(math, physics, english);
+		}
+		function CalcAverage(m, p, e) {
+			var sum = Number(m) + Number(p) + Number(e);
+			var average = sum / 3;
+			document.getElementById("result").innerHTML = "Sum: " + sum + "<br>" + "Average: " + average;
+		}
+	</script>
+</body>
+</html>
