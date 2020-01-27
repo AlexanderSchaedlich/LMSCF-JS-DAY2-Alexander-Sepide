@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Crystal Gazer</h1>
+	<p>Number of children</p>
+	<input type="number" name="number" id="number">
+	<p>Partner's name</p>
+	<input type="text" name="text" id="name">
+	<p>Geographic location</p>
+	<input type="text" name="text" id="location">
+	<p>Job title</p>
+	<input type="text" name="text" id="job">
+	<br>
+	<button type="submit" onclick="getValuesOfCrystalGazer()">Submit</button>
+	<br>
+
+	<h1>Age Calculator</h1>
+	<p>Birth year</p>
+	<input type="number" name="number" id="birth">
+	<br>
+	<button type="submit" onclick="getValuesOfAgeCalculator()">Submit</button>
+	<br>
+
+	<h1>Degree-Radian Conversion</h1>
+	<p>Degrees</p>
+	<input type="number" name="number" id="degrees">
+	<br>
+	<button type="submit" onclick="getValuesOfDRConversion()">Submit</button>
+
+	<h1>Area and Volume of a box</h1>
+	<p>Width</p>
+	<input type="number" name="number" id="width">
+	<p>Hight</p>
+	<input type="number" name="number" id="height">
+	<p>Depth</p>
+	<input type="number" name="number" id="depth">
+	<br>
+	<button type="submit" onclick="getValuesOfAreaAndVolume()">Submit</button>
+	<script>
+		// Crystal Gazer
+		var number;
+		var name;
+		var loc;
+		var job;
+		function getValuesOfCrystalGazer() {
+			number = document.getElementById("number").value;
+			name = document.getElementById("name").value;
+			loc = document.getElementById("location").value;
+			job = document.getElementById("job").value;
+			crystalGazer(number, name, loc, job);
+		}
+		function crystalGazer(numberOfChildren, partnerName, geographicalLocation, jobTitle) {
+			document.write("You will be a " + jobTitle + " in " + geographicalLocation + " and married to " + partnerName + " with " + numberOfChildren + " children.");
+		}
+		//Age Calculator
+		document.getElementById("birth").defaultValue = "1990";
+		var birth;
+		function getValuesOfAgeCalculator() {
+			console.log("birth")
+			birth = document.getElementById("birth").value;
+			current = new Date().getFullYear();
+			ageCalculator(birth, current);
+			console.log(birth)
+		}
+		function ageCalculator(birthYear, currentYear) {
+			var either = Number(currentYear) - Number(birthYear) - 1;
+			var or = ++either;
+			document.write("Your age is either " + either + " or " + or + " .")
+		}
+		//Degree-Radian Conversion
+		var degrees;
+		function getValuesOfDRConversion() {
+			degrees = document.getElementById("degrees").value;
+			var result = dRConversion(degrees);
+			document.write(result);
+		}
+		function dRConversion(d) {
+			var radians = Number(d) * Math.PI / 180;
+			var firstResult = radians + " radians";
+			return firstResult;
+			// document.write(result + " radians")
+		}
+		//Area and Volume of a box
+		var width;
+		var height;
+		var depth;
+		function getValuesOfAreaAndVolume() {
+			width = document.getElementById("width").value;
+			height = document.getElementById("height").value;
+			depth = document.getElementById("depth").value;
+			var result = areaAndVolume(width, height, depth);
+			document.write(result);
+
+		}
+		function areaAndVolume(w, h, d) {
+			var area = w * h;
+			var volume = w * h * d;
+			return ("The area of the box is: " + area + "<br>" + "The volume of the box is: " + volume);
+		}
+	</script>
+</body>
+</html>
