@@ -7,28 +7,28 @@ function basic1(){
 	var partnersname = document.getElementById("partners_name").value;	
 	var jobtitle = document.getElementById("job_title").value;
 	var loc = document.getElementById("location").value;
-	crystalGazer(childrens,partnersname,jobtitle,loc);
+	var result=crystalGazer(childrens,partnersname,jobtitle,loc);
+	document.getElementById("result").innerHTML = result;
 }
 function crystalGazer(number_childrens , partners_name, job_title, geoloc){
 
 	var result = "number of children: "+ number_childrens +"<br>partner's name" +partners_name+ "<br>geographic location :" + geoloc + "<br>job title :"+  job_title;
-	document.getElementById("result").innerHTML = result;
+	return result;	
 }
 function basic2(){
 	
 	 	var currentDate = new Date();
 	 	var currentYear = currentDate.getFullYear();
 	 	var birthYear = document.getElementById("birth_year").value;
-	 	ageCalculator(birthYear,currentYear);	
+	 	var result=ageCalculator(birthYear,currentYear);
+	 	document.getElementById("birthResult").innerHTML = result;	
 }
 function ageCalculator(birth_year,current_year){
 		
 	var age = Number(current_year) - Number(birth_year);
-	console.log(age);
-	
 	var result = "You are either " + age + " or " + ++age;
-	document.getElementById("birthResult").innerHTML = result;	
-
+	return result;
+	
 }
 function basic4(){
 
@@ -50,12 +50,12 @@ function basic5(){
 	document.getElementById("basic5Result").innerHTML = result;
 
 }
-function degreesToRadiusConvertor(width_Num,height_Num,depth_Num){
+function calculateAreaAndVolume(width_Num,height_Num,depth_Num){
 	 
 	var area = "The area of the box is: " + Number(width_Num) * Number(height_Num);
 	var volume = "The volume of the box is: " + Number(width_Num) * Number(height_Num) * Number(depth_Num);
-	var result = area + <br> + volume;
-	document.getElementById("basic4Result").innerHTML = result;
+	var result = area + "<br>" + volume;
+	return result
 
 }
 // Basic 6
