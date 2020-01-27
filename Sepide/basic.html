@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="basic.js" type="text/javascript" charset="utf-8" async defer></script>
+	<style type="text/css" media="screen">
+		.divTitle{
+			padding: 10px;
+			margin: 10px;
+			border: 1px solid gray;
+		}
+		.divContent{
+			padding: 10px;
+			margin: 10px;
+
+		}
+	</style>
+</head>
+<body onload="onload_basic()">
+	<div class="divTitle">
+		Basic 1
+	</div>
+	<div class="basic01 divContent">
+		<p>Number of children</p>
+		<input type="number" name="number_childrens" id="number_childrens">
+		<p>Partner's name</p>
+		<input type="text" name="partners_name" id="partners_name">
+		<p>Geographic location</p>
+		<input type="text" name="location" id="location">
+		<p>Job title</p>
+		<input type="text" name="job_title" id="job_title">
+		<br>
+		<br>
+		<button type="submit" onclick="basic1()">Submit</button>
+		<br>
+		<div id="result">
+		</div>
+	</div>
+	<div class="divTitle">
+		Basic 2 , 3
+	</div>
+	<div class="basic02 divContent">
+		<p>birth year</p>
+		<input type="number" name="birth_year" id="birth_year">
+		<br>
+		<br>
+		<button type="submit" onclick="basic2()">Submit</button>
+		<br>
+		<div id="birthResult">
+		</div>
+	</div>
+	<div class="divTitle">
+		Basic 4 degrees to radians
+	</div>
+	<div class="basic04 divContent">
+		<p>Degrees</p>
+		<input type="number" name="degrees" id="degreesValue">
+		<br>
+		<br>
+		<button type="submit" onclick="basic4()">Submit</button>
+		<br>
+		<div id="basic4Result">
+		</div>
+	</div>
+	<div class="divTitle">
+		Basic 5
+	</div>
+	<div class="basic05 divContent">
+		<p>Width</p>
+		<input type="number" name="widthNum" id="widthNum">
+		<p>Height</p>
+		<input type="number" name="heightNum" id="heightNum">
+		<p>Depth</p>
+		<input type="number" name="depthNum" id="depthNum">
+		<br>
+		<br>
+		<button type="submit" onclick="basic5()">Submit</button>
+		<br>
+		<div id="basic5Result">
+		</div>
+	</div>
+	<div class="divTitle">
+		Basic 6
+	</div>
+	<div class="basic06 divContent">
+		<p id='message'></p>
+		<div id="showMessage">
+			
+		</div>
+	</div>
+</body>
+</html>
